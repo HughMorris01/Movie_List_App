@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMovieList App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css" integrity="sha384-3fdgwJw17Bi87e1QQ4fsLn4rUFqWw//KU0g8TvV6quvahISRewev6/EocKNuJmEw" crossorigin="anonymous">    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 class="display-4 text-center">
+        <i class="fa-solid fa-film text-primary"></i> <span class="text-dark">My</span>Movie<span class="text-dark">List</span>
+      </h1>
+      <form id="movie-form">
+        <div class="form-group">
+          <label for="title">Movie Title:</label>
+          <input type="text" id="movie-title" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="director">Director:</label>
+          <input type="text" id="movie-director" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="release">Release Date:</label>
+          <input type="text" id="release-date" class="form-control" />
+        </div>
+        <input type="submit" value="Add Movie" class="btn btn-block btn-primary" />
+      </form>
+      <table class="table table-striped align-middle mt-5">
+        <thead>
+          <tr>
+            <th>Movie Title</th>
+            <th>Director</th>
+            <th>Relaese Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="movie-list"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

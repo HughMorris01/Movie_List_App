@@ -50,6 +50,8 @@ class UI {
             let movie = new Movie(movieTitle, movieDirector, releaseDate);
             UI.addMovieToList(movie);
             Store.addMovie(movie);
+            UI.showAlert("Movie has been added", "success");
+            UI.clearFields();
         }
     }
 
@@ -110,12 +112,6 @@ document.addEventListener('DOMContentLoaded', UI.displayMovies);
 document.querySelector('#movie-form').addEventListener('submit', (e)=>{
     e.preventDefault();
     UI.submit();
-
-    // Show success message
-    UI.showAlert("Movie has been added", "success");
-    
-    // Clear Fields
-    UI.clearFields();
 })
 
 // Event: Remove a Movie
